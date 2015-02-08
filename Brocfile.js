@@ -32,6 +32,7 @@ appJs = to5Transpiler(appJs);
 var vendorJs = [
   'loader.js/loader.js',
   'react/react.js',
+  'react-router/dist/react-router.js',
   'flux/dist/Flux.js',
   'jquery/dist/jquery.js',
   'bootstrap-sass-official/assets/javascripts/bootstrap.js'
