@@ -27,20 +27,23 @@ appJs = filterReact(appJs);
 appJs = new transpileES6(appJs);
 appJs = to5Transpiler(appJs);
 
+var vendorJs = [
+  'loader.js/loader.js',
+  'react/react.js',
+  'flux/dist/Flux.js',
+  'jquery/dist/jquery.js',
+  'bootstrap-sass-official/assets/javascripts/bootstrap.js'
+];
+
 var bowerJs = new Funnel('bower_components', {
-  include: [
-    'loader.js/loader.js',
-    'react/react.js',
-    'bower_components/jquery/dist/jquery.js',
-    'bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js'
-  ]
+  include: vendorJs.slice(0)
 });
 
 var allJs = mergeTrees([bowerJs, appJs]);
 
 allJs = concat(allJs, {
   outputFile: 'assets/app.js',
-  inputFiles: ['loader.js/loader.js', '**/*.js']
+  inputFiles: vendorJs.concat('**/*.js')
 });
 
 module.exports = mergeTrees([appHtml, appCss, allJs]);
