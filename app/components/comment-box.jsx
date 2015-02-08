@@ -1,3 +1,4 @@
+import React from 'react';
 import dispatcher from '../dispatcher';
 import commentBoxConstants from '../constants/comment-box-constants';
 

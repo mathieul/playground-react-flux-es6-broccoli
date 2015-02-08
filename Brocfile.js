@@ -5,7 +5,8 @@ var transpileES6 = require('broccoli-es6modules');
 var to5Transpiler = require("broccoli-6to5-transpiler");
 var concat = require('broccoli-sourcemap-concat');
 var compileSass = require('broccoli-sass');
-var log = require('broccoli-stew').log;
+// var log = require('broccoli-stew').log;
+// var debug = require('broccoli-stew').debug;
 
 var app = new Funnel('app');
 
@@ -26,6 +27,7 @@ appJs = filterReact(appJs);
 // appJs = log(appJs);
 appJs = new transpileES6(appJs);
 appJs = to5Transpiler(appJs);
+// appJs = debug(appJs, {name: '6to5'});
 
 var vendorJs = [
   'loader.js/loader.js',
@@ -39,7 +41,7 @@ var bowerJs = new Funnel('bower_components', {
   include: vendorJs.slice(0)
 });
 
-var allJs = mergeTrees([bowerJs, appJs]);
+var allJs = mergeTrees([bowerJs, appJs, 'lib']);
 
 allJs = concat(allJs, {
   outputFile: 'assets/app.js',

@@ -1,3 +1,4 @@
+import React from 'react';
 import commentBoxActions from '../actions/comment-box-actions';
 
 export default React.createClass({

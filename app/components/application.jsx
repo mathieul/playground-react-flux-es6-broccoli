@@ -1,3 +1,4 @@
+import React from 'react';
 import CommentBox from './comment-box';
 import CommentForm from './comment-form';
 
