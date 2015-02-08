@@ -1,0 +1,16 @@
+{
+  "name": "road-to-done",
+  "version": "0.0.1",
+  "authors": [
+    "Mathieu Lajugie <mathieu@caring.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
