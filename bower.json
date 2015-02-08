@@ -12,5 +12,9 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "loader.js": "~3.1.0",
+    "react": "~0.12.2"
+  }
 }

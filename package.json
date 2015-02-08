@@ -18,6 +18,7 @@
     "broccoli-merge-trees": "^0.2.1",
     "broccoli-react": "^0.7.0",
     "broccoli-sass": "^0.3.3",
-    "broccoli-sourcemap-concat": "^0.4.3"
+    "broccoli-sourcemap-concat": "^0.4.3",
+    "broccoli-stew": "^0.1.7"
   }
 }
