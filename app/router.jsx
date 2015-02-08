@@ -4,13 +4,15 @@ import Application from 'components/application';
 import Comments from 'components/comments';
 import About from 'components/about';
 
-let {Route, DefaultRoute} = Router;
-let routes = (
+let {Route, Redirect} = Router;
+
+Router.run(
   <Route handler={Application}>
     <Route name="comments" handler={Comments} />
     <Route name="about" handler={About} />
-    <DefaultRoute handler={Comments} />
-  </Route>
-);
+    <Redirect to="comments" />
+  </Route>,
 
-Router.run(routes, Handler => React.render(<Handler />, document.getElementById('content')));
+  Router.HistoryLocation,
+  Handler => React.render(<Handler />, document.getElementById('content'))
+);
