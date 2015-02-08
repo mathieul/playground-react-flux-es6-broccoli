@@ -16,7 +16,7 @@ export default React.createClass({
     return (
       <form onSubmit={this._updateCommentBoxText}>
         <div className="form-group">
-          <label for="comment-form-text">Text</label>
+          <label htmlFor="comment-form-text">Text</label>
           <input type="text"
                  id="comment-form-text"
                  name="text"
