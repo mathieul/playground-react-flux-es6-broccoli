@@ -1,5 +1,5 @@
 {
-  "name": "road-to-done",
+  "name": "playground-react-flux-es6-broccoli",
   "version": "0.0.1",
   "description": "tool suite to spec and follow implementation and maintenance of software projects.",
   "main": "index.js",
