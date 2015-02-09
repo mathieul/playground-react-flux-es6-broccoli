@@ -21,10 +21,14 @@ export default React.createClass({
   },
 
   componentDidMount() {
-    dispatcher.register(action => {
+    this.updateTextId = dispatcher.register(action => {
       if (action.actionType === commentBoxConstants.UPDATE_TEXT) {
         this.setState({text: action.text});
       }
     });
+  },
+
+  componentWillUnmount() {
+    dispatcher.unregister(this.updateTextId);
   }
 });
